@@ -11,9 +11,9 @@
 
   Options:
 
-  colors : An object containing light and dark color options.
-  		light : the color that the placeholder changes to on focus
-		dark : the standard color of the text.
+  colors : An object containing focus and normal color options.
+  		focus : the color that the placeholder changes to on focus
+		normal : the standard color of the text.
 
   placeholder : A string that is used as the placeholder text.	
 
@@ -57,8 +57,8 @@ DEALINGS IN THE SOFTWARE.
 		
 		var settings = {
 			colors : {
-				light : '#aaa',
-				dark : '#000',
+				focus : '#aaa',
+				normal : '#000',
 			},
 			placeholder : 'Enter Something...',
 		}
@@ -67,14 +67,14 @@ DEALINGS IN THE SOFTWARE.
 			
 			var opts = $.extend({},settings,options);
 
-			var input = $('<input type="text" class="input-placeholder" value="' + opts.placeholder + '">').css('color',opts.colors.dark).appendTo($(this));
+			var input = $('<input type="text" class="input-placeholder" value="' + opts.placeholder + '">').css('color',opts.colors.normal).appendTo($(this));
 
 			input.bind({
 				focus : function() {
-					$(this).css('color',opts.colors.light);
+					$(this).css('color',opts.colors.focus);
 				},
 				focusout : function() {
-					$(this).css('color',opts.colors.dark);
+					$(this).css('color',opts.colors.normal);
 
 					if($(this).val() === '') {
 						$(this).val(opts.placeholder);
@@ -82,19 +82,19 @@ DEALINGS IN THE SOFTWARE.
 						$(this).bind({
 							keydown : function() {
 								$(this).val('');
-								$(this).css('color',opts.colors.dark);
+								$(this).css('color',opts.colors.normal);
 								$(this).unbind('keydown');
 								$(this).unbind('focus');
 							},
 							focus : function() {
-								$(this).css('color',opts.colors.light);
+								$(this).css('color',opts.colors.focus);
 							},
 						});
 					}
 				},
 				keydown : function() {
 					$(this).val('');
-					$(this).css('color',opts.colors.dark);
+					$(this).css('color',opts.colors.normal);
 					$(this).unbind('keydown');
 					$(this).unbind('focus');
 				}
