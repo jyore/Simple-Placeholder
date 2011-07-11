@@ -14,8 +14,8 @@ http://jyore.com/javascript/jquery/plugins/simpleplaceholder/
 Options:
 
   colors : An object containing light and dark color options.
-  		light : the color that the placeholder changes to on focus
-		dark : the standard color of the text.
+  		focus : the color that the placeholder changes to on focus
+		normal : the standard color of the text.
 
   placeholder : A string that is used as the placeholder text.	
 
