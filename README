@@ -7,6 +7,9 @@ disappears and the key press registers as normal.  If the user leaves the
 edit box blank, then the placeholder is restored.  The user inputted text
 will not change colors.
 
+PROJECT DOCUMENTATION AND DEMOS AT:
+http://jyore.com/javascript/jquery/plugins/simpleplaceholder/
+
 
 Options:
 
