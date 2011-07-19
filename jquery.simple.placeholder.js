@@ -1,6 +1,6 @@
 /**************************************************************************
 
-  jQuery Simple Placeholder Plugin
+  jQuery Simple Placeholder Plugin v0.1r1
 
   This plugin is designed to give a placeholder to text edit boxes.  
   This placeholder will change colors when the user focuses/unfocuses 
@@ -70,8 +70,9 @@ DEALINGS IN THE SOFTWARE.
 			var input = $('<input type="text" class="input-placeholder" value="' + opts.placeholder + '">').css('color',opts.colors.normal).appendTo($(this));
 
 			input.bind({
-				focus : function() {
+				click : function() {
 					$(this).css('color',opts.colors.focus);
+					input[0].setSelectionRange(0,0);
 				},
 				focusout : function() {
 					$(this).css('color',opts.colors.normal);
@@ -84,10 +85,11 @@ DEALINGS IN THE SOFTWARE.
 								$(this).val('');
 								$(this).css('color',opts.colors.normal);
 								$(this).unbind('keydown');
-								$(this).unbind('focus');
+								$(this).unbind('click');
 							},
-							focus : function() {
+							click : function() {
 								$(this).css('color',opts.colors.focus);
+								input[0].setSelectionRange(0,0);
 							},
 						});
 					}
@@ -96,7 +98,7 @@ DEALINGS IN THE SOFTWARE.
 					$(this).val('');
 					$(this).css('color',opts.colors.normal);
 					$(this).unbind('keydown');
-					$(this).unbind('focus');
+					$(this).unbind('click');
 				}
 			});
 		});
