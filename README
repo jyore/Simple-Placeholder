@@ -24,9 +24,11 @@ Options:
 
   HTML
   <div id='placeholder'></div>
+  <input id='placeholder2'>
 
   JavaScript
   $('#placeholder').placeholder();
+  $('#placeholder2').placeholder();
 
 
 
