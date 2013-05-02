@@ -1,5 +1,8 @@
 This plugin is designed to give a placeholder to text edit boxes. This placeholder will change colors when the user focuses/unfocuses the placeholder. If the user inputs any character, then the placeholder disappears and the key press registers as normal. If the user leaves the edit box blank, then the placeholder is restored. The user inputted text will not change colors.
 
+
+Full documentation and examples available at: http://jyore.com/post/8/
+
 Distributed under the MIT License (See License File).
 
 Code Example:
