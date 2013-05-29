@@ -11,14 +11,14 @@
 
   Options:
 
-  colors : An object containing focus and normal color options.
-  		blur : the color that the placeholder
-  		focus : the color that the placeholder changes to on focus
-		normal : the color of the input text.
+          colors : An object containing focus and normal color options.
+          blur : the color that the placeholder
+          focus : the color that the placeholder changes to on focus
+          normal : the color of the input text.
 
-  placeholder : A string that is used as the placeholder text.	
+  placeholder : A string that is used as the placeholder text.    
 
-  validate: A custom validation function.	
+  validate: A custom validation function.    
 
 
   Example:
